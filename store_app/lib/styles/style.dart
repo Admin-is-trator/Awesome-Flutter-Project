@@ -19,7 +19,7 @@ abstract class Styles {
   static const TextStyle productRowItemPrice = TextStyle(
     color: Color(0xFF8E8E93),
     fontSize: 13,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w600,
   );
 
   static const TextStyle searchText = TextStyle(
@@ -31,7 +31,7 @@ abstract class Styles {
 
   static const TextStyle deliveryTimeLabel = TextStyle(
     color: Color(0xFFC2C2C2),
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w600,
   );
 
   static const TextStyle deliveryTime = TextStyle(
