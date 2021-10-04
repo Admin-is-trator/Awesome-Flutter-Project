@@ -12,16 +12,18 @@ class HomePage extends StatelessWidget {
       tabBar: CupertinoTabBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Products',
-          ),
+              icon: Icon(CupertinoIcons.home),
+              label: 'Products',
+              tooltip: 'Products'),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.search),
             label: 'Search',
+            tooltip: 'Search',
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.shopping_cart),
             label: 'Cart',
+            tooltip: 'Cart',
           ),
         ],
       ),
@@ -30,21 +32,21 @@ class HomePage extends StatelessWidget {
         switch (index) {
           case 0:
             returnValue = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
+              return const CupertinoPageScaffold(
                 child: ProductListTabPage(),
               );
             });
             break;
           case 1:
             returnValue = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
+              return const CupertinoPageScaffold(
                 child: SearchTabPage(),
               );
             });
             break;
           case 2:
             returnValue = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
+              return const CupertinoPageScaffold(
                 child: ShoppingCartTabPage(),
               );
             });

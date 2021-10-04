@@ -5,13 +5,11 @@ import 'package:store_app/provider/app_state_model.dart';
 import 'package:store_app/styles/style.dart';
 
 class ProductRowItem extends StatelessWidget {
-  const ProductRowItem({
-    required this.product,
-    required this.lastItem,
-  });
 
   final Product product;
   final bool lastItem;
+
+  const ProductRowItem({Key? key, required this.product, required this.lastItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +43,12 @@ class ProductRowItem extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     product.name,
-                    style: Styles.productRowItemName,
+                    style: CupertinoTheme.of(context).copyWith().textTheme.textStyle,
                   ),
                   const Padding(padding: EdgeInsets.only(top: 8)),
                   Text(
                     '\$${product.price}',
-                    style: Styles.productRowItemPrice,
+                    style: CupertinoTheme.of(context).copyWith().textTheme.textStyle,
                   )
                 ],
               ),
