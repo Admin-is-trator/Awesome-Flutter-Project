@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class SearchTabPage extends StatefulWidget {
+  const SearchTabPage({Key? key}) : super(key: key);
+
   @override
   _SearchTabPageState createState() {
     return _SearchTabPageState();
@@ -10,10 +12,13 @@ class SearchTabPage extends StatefulWidget {
 class _SearchTabPageState extends State<SearchTabPage> {
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return CustomScrollView(
       slivers: <Widget>[
         CupertinoSliverNavigationBar(
-          largeTitle: Text('Search'),
+          largeTitle: Text(
+            'Search',
+            style: CupertinoTheme.of(context).copyWith().textTheme.textStyle,
+          ),
         ),
       ],
     );

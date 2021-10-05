@@ -5,6 +5,8 @@ import 'package:store_app/provider/app_state_model.dart';
 import 'product_item_row.dart';
 
 class ProductListTabPage extends StatelessWidget {
+  const ProductListTabPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -15,7 +17,7 @@ class ProductListTabPage extends StatelessWidget {
             semanticChildCount: products.length,
             slivers: <Widget>[
               CupertinoSliverNavigationBar(
-                largeTitle: Text('IDN Store'),
+                largeTitle: Text('IDN Store', style: CupertinoTheme.of(context).copyWith().textTheme.textStyle,),
               ),
               SliverSafeArea(
                 top: false,
